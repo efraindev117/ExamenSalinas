@@ -1,4 +1,4 @@
-package com.example.salinasexamen.utils
+package com.example.examensalinas.utils
 
 object Constants {
     const val BASE_URL = "https://api.themoviedb.org/3/"
@@ -9,4 +9,4 @@ object Constants {
     const val BASE_POSTER_IMG = "https://image.tmdb.org/t/p/w500/"
 }
 //https://api.themoviedb.org/3/movie/popular?api_key=29d6b5941ac2445b2734215b41fab36f&language=en-US&page=1
-//https://api.themoviedb.org/3/movie/29d6b5941ac2445b2734215b41fab36f&language=en-US&page=1
+//https://api.themoviedb.org/3/movie/29d6b5941ac2445b2734215b41fab36f&language=en-US&page=

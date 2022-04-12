@@ -1,6 +1,8 @@
-package com.example.salinasexamen.model.data
+package com.example.examensalinas.model.data
 
-import com.example.examensalinas.model.data.ResultMovieEntity
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
 
 data class ResponseMovie(
     val page: Int,

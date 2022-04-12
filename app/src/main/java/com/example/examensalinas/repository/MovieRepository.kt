@@ -1,6 +1,6 @@
-package com.example.salinasexamen.repository
+package com.example.examensalinas.repository
 
-import com.example.salinasexamen.network.MoviesService
+import com.example.examensalinas.network.MoviesService
 import javax.inject.Inject
 
 class MovieRepository @Inject constructor(private val moviesService: MoviesService) {

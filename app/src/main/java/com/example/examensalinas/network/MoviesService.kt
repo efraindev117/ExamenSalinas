@@ -1,10 +1,10 @@
-package com.example.salinasexamen.network
+package com.example.examensalinas.network
 
-import com.example.salinasexamen.model.data.ResponseMovie
-import com.example.salinasexamen.utils.Constants.API_KEY
-import com.example.salinasexamen.utils.Constants.END_POINT_MOVIE_NOW
-import com.example.salinasexamen.utils.Constants.END_POINT_MOVIE_POPULAR
-import com.example.salinasexamen.utils.Constants.QUERY_OPTIONAL
+import com.example.examensalinas.model.data.ResponseMovie
+import com.example.examensalinas.utils.Constants.API_KEY
+import com.example.examensalinas.utils.Constants.END_POINT_MOVIE_NOW
+import com.example.examensalinas.utils.Constants.END_POINT_MOVIE_POPULAR
+import com.example.examensalinas.utils.Constants.QUERY_OPTIONAL
 import retrofit2.Response
 import retrofit2.http.GET
 

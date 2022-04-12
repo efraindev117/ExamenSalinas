@@ -1,7 +1,7 @@
 package com.example.examensalinas.network.dependencyInjection
 
-import com.example.salinasexamen.network.MoviesService
-import com.example.salinasexamen.utils.Constants.BASE_URL
+import com.example.examensalinas.network.MoviesService
+import com.example.examensalinas.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

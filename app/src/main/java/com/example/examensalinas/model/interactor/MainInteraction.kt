@@ -1,11 +1,11 @@
 package com.example.salinasexamen.model.interactor
 
 import com.example.examensalinas.model.data.ResultMovieEntity
-import com.example.salinasexamen.repository.MovieRepository
+import com.example.examensalinas.repository.MovieRepository
 import javax.inject.Inject
 
 
-class MainInteraction @Inject constructor(private val movieRepository: MovieRepository ) {
+class MainInteraction @Inject constructor(private val movieRepository: MovieRepository) {
     // private lateinit var movieService: MoviesService
 
     suspend fun getDataPopularMovie(callback: (List<ResultMovieEntity>) -> Unit) {

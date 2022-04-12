@@ -1,4 +1,4 @@
-package com.example.salinasexamen.viewModel
+package com.example.examensalinas.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -32,5 +32,4 @@ class MainViewModel @Inject constructor(private val interacts: MainInteraction) 
     private fun loadDataNow() = viewModelScope.launch {
         interacts.getDataNowMovie { nowMovieResponse.value = it }
     }
-
 }

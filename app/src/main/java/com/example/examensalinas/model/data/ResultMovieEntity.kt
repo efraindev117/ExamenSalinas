@@ -1,9 +1,10 @@
 package com.example.examensalinas.model.data
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import com.example.salinasexamen.utils.Constants.BASE_POSTER_IMG
+import android.os.Parcelable
+import com.example.examensalinas.utils.Constants.BASE_POSTER_IMG
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class ResultMovieEntity(
     val id: Int,
     val adult: Boolean,
@@ -19,9 +20,9 @@ data class ResultMovieEntity(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int
-){
-
-    fun imgPopularMovie(): String = BASE_POSTER_IMG + poster_path
+) : Parcelable {
+    fun imgPosterMovie(): String = BASE_POSTER_IMG + poster_path
+    fun imgBackdropMovie(): String = BASE_POSTER_IMG + backdrop_path
 }
 
 

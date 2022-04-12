@@ -1,48 +1,32 @@
 package com.example.examensalinas.view
 
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
-import com.example.examensalinas.adapters.NowMovieAdapter
-import com.example.examensalinas.adapters.PopularMovieAdapter
+import androidx.navigation.NavAction
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import com.example.examensalinas.R
 import com.example.examensalinas.databinding.ActivityMainBinding
-import com.example.salinasexamen.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    //ViewModel
-    private val mViewModel: MainViewModel by viewModels()
+    private lateinit var navController: NavController
 
-    override fun onCreate(savedInstanceState: Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupViewModel()
+
+        val navHostFragment = supportFragmentManager
+        .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navHostFragment.navController
     }
 
-    private fun setupViewModel() {
-        //peliculas populares
-        mViewModel.getDataCallbackPopularMovie().observe(this) {
-            binding.recyclerViewPopularMovie.apply {
-                setHasFixedSize(true)
-                layoutManager = LinearLayoutManager(this@MainActivity, HORIZONTAL, false)
-                adapter = PopularMovieAdapter(it)
-            }
-        }
-
-        //peliculas ahora
-        mViewModel.getDataCallbackNowMovie().observe(this){
-            binding.recyclerViewNowMovie.apply {
-                setHasFixedSize(true)
-                layoutManager = LinearLayoutManager(this@MainActivity, HORIZONTAL,false)
-                adapter = NowMovieAdapter(it)
-            }
-        }
-    }
 }
 
 
